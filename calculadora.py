@@ -10,7 +10,7 @@ tokens = (
     'LPAREN',
     'RPAREN',
 )
-t_PLUS = r'\+'
+t_PLUS = r'\+' 
 t_MINUS = r'-'
 t_TIMES = r'\*'
 t_DIVIDE = r'/'
