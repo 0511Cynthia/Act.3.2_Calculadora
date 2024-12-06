@@ -1,7 +1,8 @@
+/* Estilos generales */
 body {
     margin: 0;
     padding: 0;
-    background-color: #2D1E40; 
+    background-color: #2a003b; /* Fondo púrpura oscuro */
     color: white;
     font-family: Arial, sans-serif;
     display: flex;
@@ -10,16 +11,18 @@ body {
     height: 100vh;
 }
 
+/* Contenedor principal */
 .main-container {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row; /* Alinea los elementos en fila */
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px; 
+    gap: 20px; /* Espaciado entre calculadora y árbol */
 }
 
+/* Calculadora */
 .calculator {
-    background-color: #3E2A8C; 
+    background-color: #3c004f; /* Fondo morado oscuro */
     padding: 20px;
     border-radius: 8px;
     width: 250px;
@@ -32,7 +35,7 @@ body {
     text-align: right;
     margin-bottom: 10px;
     border: none;
-    background-color: #2A1A4D;
+    background-color: #22002d; /* Fondo más oscuro */
     color: white;
     border-radius: 4px;
 }
@@ -48,18 +51,26 @@ button {
     font-size: 18px;
     border: none;
     border-radius: 4px;
-    background-color: #6B4CA4; 
+    background-color: #5a007a; /* Botones morados */
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #8C6BBF; 
+    background-color: #7a00a5; /* Tonalidad más clara al pasar el cursor */
 }
 
+button:nth-child(20) {
+    background-color: #8e44ad; /* Morado claro para el botón Guardar */
+}
+
+button:nth-child(20):hover {
+    background-color: #a567c2; /* Efecto hover más claro */
+}
+
+/* Área del árbol */
 .tree-display {
-    background-color: #3E2A8C; 
+    background-color: #3c004f;
     padding: 20px;
     border-radius: 8px;
     width: 500px;
@@ -67,7 +78,50 @@ button:hover {
 }
 
 svg {
-    border: 1px solid #8C6BBF; 
-    background-color: #2A1A4D; 
+    border: 1px solid white;
+    background-color: #22002d; /* Fondo oscuro del SVG */
     border-radius: 4px;
+}
+
+/* Tabla de resultados */
+.results table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #3c004f; /* Fondo de la tabla */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.results th, .results td {
+    border: 1px solid #4f005e;
+    padding: 10px;
+    text-align: center;
+}
+
+.results th {
+    background-color: #5a007a; /* Encabezados */
+    font-weight: bold;
+    color: white;
+}
+
+.results td {
+    background-color: #2a003b; /* Celdas alternadas */
+    color: white;
+}
+
+.results table tr:nth-child(even) td {
+    background-color: #3c004f; /* Color intercalado */
+}
+
+.results table tr:hover td {
+    background-color: #7a00a5; /* Resaltar fila al pasar el cursor */
+    cursor: default;
+}
+
+.results h2 {
+    margin-top: 0;
+    font-size: 18px;
+    text-align: left;
+    color: #ddd;
 }
